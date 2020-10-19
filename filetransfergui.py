@@ -33,7 +33,7 @@ def fileCheck():
     currentTimeInHours = currentTime / 3600
     
     for i in files:
-        fullPath = source +"/" + i
+        fullPath = source + "/" + i
         modTime = os.path.getmtime(fullPath)
         modTimeInHours = modTime / 3600
         if modTimeInHours + 24 >= currentTimeInHours:
@@ -46,6 +46,8 @@ def browseFiles1():
 def browseFiles2():
     win.directory = filedialog.askdirectory()
     e2.insert(END, win.directory)
+
+win.mainloop()
     
 
 
